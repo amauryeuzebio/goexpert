@@ -1,0 +1,16 @@
+version: '3'
+
+services:
+  db:
+    image: arm64v8/mysql:8.0.32-oracle
+    container_name: mysql-go
+    restart: always
+    environment:
+      MYSQL_DATABASE: m05
+      MYSQL_USER: user
+      MYSQL_PASSWORD: user
+      MYSQL_ROOT_PASSWORD: root
+    ports:
+      - "3306:3306"
+    volumes:
+      - ./data:/var/lib/mysql
