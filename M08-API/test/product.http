@@ -7,6 +7,9 @@ Content-Type: application/json
 }
 
 ###
+GET http://localhost:3000/products
+
+###
 
 GET http://localhost:3000/products/a983cb7a-2891-49c0-91d0-47dfa43e3b10
 
@@ -19,3 +22,7 @@ Content-Type: application/json
   "name": "My Product Updated",
   "price": 200
 }
+
+###
+
+DELETE http://localhost:3000/products/a983cb7a-2891-49c0-91d0-47dfa43e3b10
