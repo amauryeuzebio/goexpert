@@ -8,6 +8,7 @@ Content-Type: application/json
 
 ###
 GET http://localhost:3000/products
+Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJleHAiOjE2ODA0OTE1NDQsInN1YiI6ImRjZDQ1YjUzLWU3MmUtNGQ0Yi05ODE0LWMzZDBhNDYzZjY2ZiJ9.DG1ucVxxFTc7b-a6Y1zqkuyymX_Slfad7VlI4dQo24c
 
 ###
 
