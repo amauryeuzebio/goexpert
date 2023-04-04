@@ -5,6 +5,7 @@ import (
 	"net/http"
 
 	"github.com/amauryeuzebio/goexpert/M08-API/configs"
+	_ "github.com/amauryeuzebio/goexpert/M08-API/docs"
 	"github.com/amauryeuzebio/goexpert/M08-API/internal/entity"
 	"github.com/amauryeuzebio/goexpert/M08-API/internal/infra/database"
 	"github.com/amauryeuzebio/goexpert/M08-API/internal/infra/webserver/handlers"
@@ -12,6 +13,7 @@ import (
 	"github.com/go-chi/chi/middleware"
 	"github.com/go-chi/chi/v5"
 	"github.com/go-chi/jwtauth"
+	httpSwagger "github.com/swaggo/http-swagger"
 	"gorm.io/driver/sqlite"
 	"gorm.io/gorm"
 )
@@ -28,7 +30,7 @@ import (
 // @license.name   A1 License
 // @license.url    https://a1tecnologia.info
 
-// @host      localhost:8000
+// @host      localhost:3000
 // @BasePath  /
 // @securityDefinitions.apikey ApiKeyAuth
 // @in header
@@ -71,6 +73,8 @@ func main() {
 
 	r.Post("/users", userHandler.CreateUser)
 	r.Post("/users/generate_token", userHandler.GetJWT)
+
+	r.Get("/docs/*", httpSwagger.Handler(httpSwagger.URL("http://localhost:3000/docs/doc.json")))
 
 	http.ListenAndServe(":3000", r)
 }

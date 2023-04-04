@@ -1,5 +1,5 @@
 basePath: /
-host: localhost:8000
+host: localhost:3000
 info:
   contact:
     email: amaury@a1tecnologia.info
