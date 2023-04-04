@@ -1,0 +1,21 @@
+basePath: /
+host: localhost:8000
+info:
+  contact:
+    email: amaury@a1tecnologia.info
+    name: Amaury Euzebio
+    url: https://a1tecnologia.info
+  description: Product API with auhtentication
+  license:
+    name: A1 License
+    url: https://a1tecnologia.info
+  termsOfService: http://swagger.io/terms/
+  title: Go Expert API Example
+  version: "1.0"
+paths: {}
+securityDefinitions:
+  ApiKeyAuth:
+    in: header
+    name: Authorization
+    type: apiKey
+swagger: "2.0"
