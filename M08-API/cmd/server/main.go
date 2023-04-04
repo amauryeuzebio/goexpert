@@ -9,6 +9,7 @@ import (
 	"github.com/amauryeuzebio/goexpert/M08-API/internal/infra/database"
 	"github.com/amauryeuzebio/goexpert/M08-API/internal/infra/webserver/handlers"
 
+	"github.com/go-chi/chi/middleware"
 	"github.com/go-chi/chi/v5"
 	"github.com/go-chi/jwtauth"
 	"gorm.io/driver/sqlite"
@@ -32,11 +33,14 @@ func main() {
 	productHandler := handlers.NewProductHandler(productDB)
 
 	userDB := database.NewUser(db)
-	userHandler := handlers.NewUserHandler(userDB, configs.TokenAuth, configs.JwtExperesIn)
+	userHandler := handlers.NewUserHandler(userDB)
 
 	r := chi.NewRouter()
-	// r.Use(middleware.Logger) // Comentado para exemplo de midware
-	r.Use(LogRequest)
+	r.Use(middleware.Logger)
+	r.Use(middleware.Recoverer) // Recover from panics without crashing server
+	r.Use(middleware.WithValue("jwt", configs.TokenAuth))
+	r.Use(middleware.WithValue("JwtExperesIn", configs.JwtExperesIn))
+	// r.Use(LogRequest)
 
 	r.Route("/products", func(r chi.Router) {
 		r.Use(jwtauth.Verifier(configs.TokenAuth))
