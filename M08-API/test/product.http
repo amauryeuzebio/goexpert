@@ -1,5 +1,6 @@
 POST http://localhost:3000/products 
 Content-Type: application/json
+Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJleHAiOjE2ODA2MjA0NTQsInN1YiI6ImYzY2NjN2YzLWFmNzItNGUzYS04ODU4LWEyMmMwZGQ1NDM4OSJ9.puswoIKi04Kp6P62RvGf8nULL8ED7SP0E2_7CIpCcPw
 
 {
   "name": "My Product",
@@ -8,7 +9,7 @@ Content-Type: application/json
 
 ###
 GET http://localhost:3000/products
-Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJleHAiOjE2ODA1NjkzMjAsInN1YiI6ImRjZDQ1YjUzLWU3MmUtNGQ0Yi05ODE0LWMzZDBhNDYzZjY2ZiJ9.IjubcIii9M0MeYaARIQbNbqhL_xEhUns_f1xRoZo5hg
+Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJleHAiOjE2ODA2MjA0NTQsInN1YiI6ImYzY2NjN2YzLWFmNzItNGUzYS04ODU4LWEyMmMwZGQ1NDM4OSJ9.puswoIKi04Kp6P62RvGf8nULL8ED7SP0E2_7CIpCcPw
 
 ###
 
