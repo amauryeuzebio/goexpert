@@ -1,0 +1,7 @@
+github.com/amauryeuzebio/goexpert/M10-Eventos v0.0.0-20230406203010-5240fc50e078 h1:Dp5e7sfUNvDFnuLxAmstOxETZMJ9+nubCAOFdl9oMEU=
+github.com/amauryeuzebio/goexpert/M10-Eventos v0.0.0-20230406203010-5240fc50e078/go.mod h1:6tJU2OV23GN51BcwZ+l2KCSiUkwJCCow0eRrlXIifw0=
+github.com/davecgh/go-spew v1.1.1 h1:vj9j/u1bqnvCEfJOwUhtlOARqs3+rkHYY13jYWTU97c=
+github.com/pmezard/go-difflib v1.0.0 h1:4DBwDE0NGyQoBHbLQYPwSUPoCMWR5BEzIk/f1lZbAQM=
+github.com/stretchr/objx v0.5.0 h1:1zr/of2m5FGMsad5YfcqgdqdWrIhu+EBEJRhR1U7z/c=
+github.com/stretchr/testify v1.8.2 h1:+h33VjcLVPDHtOdpUCuF+7gSuG3yGIftsP1YvFihtJ8=
+gopkg.in/yaml.v3 v3.0.1 h1:fxVm/GzAzEWqLHuvctI91KS9hhNmmWOoWu0XTYJS7CA=
