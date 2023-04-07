@@ -71,4 +71,17 @@ query queryCourses {
 
   }
 }
+
+query queryCoursesWithCategories {
+  courses {
+    id
+    name
+    description
+    category {
+      id
+      name
+      description
+    }
+  }
+}
 ```
