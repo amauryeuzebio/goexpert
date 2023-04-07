@@ -15,8 +15,10 @@ go run github.com/99designs/gqlgen generate
 ```bash
 sqlite3 data.db
 
-# criara tabela
+# criar tabelas
 create table categories (id string, name string, description string);
+
+create table courses (id string, name string, description string, category_id string);
 ```
 
 # Graphql
@@ -28,6 +30,33 @@ mutation createCategory {
     description: "Cursos tecnologia"
   }){
     id, name, description
+  }
+}
+
+query queryCategories {
+  categories {
+    id
+    name
+    description
+  }
+}
+
+mutation createCourse {
+  createCourse(input: {
+    name: "Go",
+    description: "Curso GoLang",
+    categoryId: "e3df3a9b-a85e-4897-9b02-523b91cbbc59"
+  }){
+    id, name, description
+  }
+}
+
+query queryCourses {
+  courses {
+    id
+    name
+    description
+
   }
 }
 ```
