@@ -41,6 +41,18 @@ query queryCategories {
   }
 }
 
+query queryCategoriesWithCourses {
+  categories {
+    id
+    name
+    description
+    courses {
+      id
+      name
+    }
+  }
+}
+
 mutation createCourse {
   createCourse(input: {
     name: "Go",
