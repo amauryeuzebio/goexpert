@@ -28,3 +28,18 @@ mysql -uroot -p courses
 
 show tables;
 ```
+
+# Configuração SQLC (https://sqlc.dev/)
+
+1. Instalação command line (https://docs.sqlc.dev/en/latest/overview/install.html)
+
+```bash
+# MacOS
+brew install sqlc
+```
+
+# Manipulando SQLC
+
+```bash
+sqlc generate
+```
