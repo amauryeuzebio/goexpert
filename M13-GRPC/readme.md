@@ -18,3 +18,9 @@ protoc --version  # Ensure compiler version is 3+
 go install google.golang.org/protobuf/cmd/protoc-gen-go@v1.28
 go install google.golang.org/grpc/cmd/protoc-gen-go-grpc@v1.2
 ```
+
+# Compilação arquivo
+
+```bash
+protoc --go_out=. --go-grpc_out=. proto/course_category.prot
+```
