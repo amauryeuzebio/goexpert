@@ -18,3 +18,21 @@ cobra-cli add category
 cobra-cli add create -p 'categoryCmd'
 cobra-cli add list -p 'categoryCmd'
 ```
+
+
+# Criando banco
+
+```bash
+sqlite3 data.db
+
+# criar tabelas
+create table categories (id string, name string, description string);
+
+create table courses (id string, name string, description string, category_id string);
+```
+
+# Testar criação categoria 
+```bash
+go run main.go category create -n=Cat2 -d=Desc2
+```
+
