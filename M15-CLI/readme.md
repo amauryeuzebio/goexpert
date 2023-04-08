@@ -12,4 +12,9 @@ cobra-cli add ping
 
 # Par rodar o comando criado
 go run main.go ping
+
+# Criando comando filhos
+cobra-cli add category
+cobra-cli add create -p 'categoryCmd'
+cobra-cli add list -p 'categoryCmd'
 ```
